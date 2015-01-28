@@ -1,0 +1,12 @@
+# Site settings
+title: JekyllPress
+email: your-email@domain.com
+description: A plugin that pulls content from a WordPress API and spits out Jekyll-ready posts
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: gboone42
+github_username:  gboone
+
+# Build settings
+markdown: kramdown
+wpApi: https://your-domain-here/wp-json/

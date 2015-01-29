@@ -12,4 +12,4 @@ The ultimate goal is a Jekyll installation where you can write posts in either t
 
 ## Support
 
-The plugin currently supports ingesting posts and exporting the raw post content. And currently it's failing on anything beyond the first post for some strange reason. But, hey, we're just getting started! This is very much a work in progress and contributions are welcome.
+The plugin currently supports ingesting posts and exporting the raw post content. And currently has some characters like pipes showing up in strange places. But, hey, we're just getting started! This is very much a work in progress and contributions and bits of advice are welcome.

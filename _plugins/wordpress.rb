@@ -1,6 +1,7 @@
 require 'fileutils'
 require 'open-uri'
 require 'json'
+require 'wordpress-api'
 
 module Jekyll
 	class WpPost < Page
@@ -14,16 +15,16 @@ module Jekyll
 		safe true
 
 		def generate(site)
-			wpposts = grabPosts(site)
+			wpposts = WordPress.grab_posts(site.config['wpApi'], count = -1)
 			generatePosts(site, wpposts)
 		end
 
-		def grabPosts(site)
-			index = WpPost.new(site, site.source)
-			puts("WordPress API: #{site.config['wpApi']}")
-			data = open(site.config['wpApi'] + "posts/")
-			wpposts = JSON.load(data)
-		end
+		# def grabPosts(site)
+		# 	index = WpPost.new(site, site.source)
+		# 	puts("WordPress API: #{site.config['wpApi']}")
+		# 	data = open(site.config['wpApi'] + "posts/")
+		# 	wpposts = JSON.load(data)
+		# end
 
 		def generatePosts(site, data)
 			for d in data
